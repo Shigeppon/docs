@@ -39,3 +39,11 @@ $ knife cookbook create hello -o site-cookbooks
 ```bash
 $ knife solo cook test01
 ```
+## 嵌ったこと
+### not_ifが効かない
+* 概要
+gitをインストールするレシピを作成し、既に特定のバージョンがインストールされている場合にはインストールを行わないようにしたいため、`not_if`を使ってみたがインストールスクリプトが動いてしまう。
+* 解決方法
+未解決
+* 参考URL
+[chef install and update programs from source](http://stackoverflow.com/questions/8530593/chef-install-and-update-programs-from-source)
