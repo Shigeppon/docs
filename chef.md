@@ -28,9 +28,14 @@ $ knife solo prepare <host>
 ```
 
 ## cookbookの作成
-* knife cookbook create <cookbookName> -o <cookbooksDirectory>
+* knife cookbook create
 
 ```bash
 $ knife cookbook create hello -o site-cookbooks
 ```
 
+## レシピの反映
+
+```bash
+$ knife solo cook test01
+```
