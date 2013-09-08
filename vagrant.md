@@ -27,4 +27,8 @@ $ vagrant up
 
 ```bash
 $ vim ~/.ssh/config
+Host test01
+    HostName        192.168.50.12
+    IdentityFile    ~/.vagrant.d/insecure_private_key
+    User            vagrant
 ```
