@@ -44,6 +44,7 @@ git version 1.8.4
 * GitHubでリポジトリを作成
 今回はgit_testという名前にしてみる
 * LocalのGitでリモートリポジトリの追加
+
 ```bash
 $ cd local/repository
 $ git remote add origin git@gihub.com:Shigeppon/git_test.git
