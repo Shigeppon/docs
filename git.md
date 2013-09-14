@@ -1,11 +1,13 @@
 # コマンド補完とbashへのブランチ表示
-* git-completion.bash  
-[git-completion.bash](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash)
+* git-completion.bashとgit-prompt.sh
+[git/gitリポジトリ](https://github.com/git/git.git)
 をダウンロードし.bashrcから読み込むようにする。
 
 ```bash
 source ~/.git-completion.bash
-PS1="\h@\u:\W\$(__git_ps1) \$"
+source ~/.git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true
+export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\$ '
 ```
 
 # git add . と git add -uの違い
