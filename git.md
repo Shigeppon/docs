@@ -1,7 +1,8 @@
 # コマンド補完とbashへのブランチ表示
-* git-completion.bash
+* git-completion.bash  
 [git-completion.bash](https://github.com/git/git/blob/master/contrib/completion/git-completion.bash)
 をダウンロードし.bashrcから読み込むようにする。
+
 ```bash
 source ~/.git-completion.bash
 PS1="\h@\u:\W\$(__git_ps1) \$"
