@@ -1,6 +1,7 @@
 # vagrantを使ってみる
 * vagrantのインストール
 
+**gemだと1.0.x系が入ってしまうので、VagrantのHPから直接入れる。**
 ```bash
 $ gem install vagrant
 $ rbenv rehash
