@@ -1,4 +1,4 @@
-# CenOS6.5へgit1.9.0をインストールする
+# CentOS6.5へgit1.9.0をインストールする
 vagrantで作成したCentOS6.5のgitが1.7だったため、gitconfigにpush.simpleを指定してあるとwarningを出すので、
 1.9にすることにした。
 ```bash
