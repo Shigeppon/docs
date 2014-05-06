@@ -1,3 +1,20 @@
+# CenOS6.5へgit1.9.0をインストールする
+vagrantで作成したCentOS6.5のgitが1.7だったため、gitconfigにpush.simpleを指定してあるとwarningを出すので、
+1.9にすることにした。
+```bash
+$wget https://git-core.googlecode.com/files/git-1.9.0.tar.gz
+$ tar xvzf git-1.9.0.tar.gz
+$ cd git-1.9.0
+$ ./configure --prefix=/usr/local
+$ sudo yum install zlib-devel
+$ sudo yum install perl-ExtUtils-MakeMaker
+$ make
+$ sudo make install
+$ bash
+$ git --version
+git version 1.9.0
+```
+
 # コマンド補完とbashへのブランチ表示
 * git-completion.bashとgit-prompt.sh
 [git/gitリポジトリ](https://github.com/git/git.git)
