@@ -8,6 +8,7 @@ $ cd git-1.9.0
 $ ./configure --prefix=/usr/local --with-curl
 $ sudo yum install zlib-devel
 $ sudo yum install perl-ExtUtils-MakeMaker
+$ sudo yum install curl-devel
 $ make
 $ sudo make install
 $ bash
@@ -21,7 +22,7 @@ rbenvをgit clone しようとしたら以下のエラーが出た。
 $ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 fatal: Unable to find remote helper for 'https'
 ```
-gitのコンパイル時にcurlライブラリをリンクできていなかったのが原因なので、```--with-curl```をつける。
+gitのコンパイル時にcurlライブラリをリンクできていなかったのが原因なので、curl-develをインストール後--with-curlをつけconfigureする。
 
 
 # コマンド補完とbashへのブランチ表示
