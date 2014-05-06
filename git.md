@@ -5,7 +5,7 @@ vagrantで作成したCentOS6.5のgitが1.7だったため、gitconfigにpush.si
 $wget https://git-core.googlecode.com/files/git-1.9.0.tar.gz
 $ tar xvzf git-1.9.0.tar.gz
 $ cd git-1.9.0
-$ ./configure --prefix=/usr/local
+$ ./configure --prefix=/usr/local --with-curl
 $ sudo yum install zlib-devel
 $ sudo yum install perl-ExtUtils-MakeMaker
 $ make
@@ -14,6 +14,15 @@ $ bash
 $ git --version
 git version 1.9.0
 ```
+
+- --with-curl
+rbenvをgit clone しようとしたら以下のエラーが出た。
+```bash
+$ git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+fatal: Unable to find remote helper for 'https'
+```
+gitのコンパイル時にcurlライブラリをリンクできていなかったのが原因なので、```--with-curl```をつける。
+
 
 # コマンド補完とbashへのブランチ表示
 * git-completion.bashとgit-prompt.sh
