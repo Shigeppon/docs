@@ -61,7 +61,45 @@ not_if "/usr/local/bin/git --version | grep -q '1.8.4'"
 [chef install and update programs from source](http://stackoverflow.com/questions/8530593/chef-install-and-update-programs-from-source)
 
 ## Berkshelf
+- Berksfileの作成
+```bash
+source "https://api.berkshelf.com/"
+
+cookbook 'yum'
+cookbook 'nginx'
+cookbook 'user'
+```
+
+- Berksfileの内容を元にcookbookを取得
+```bash
+$ berks vendor cookbooks
+
+# これでcookbooksの下にサードパーティcookbookが入ります
+$ ls cookbooks
+apt/  Berksfile.lock  bluepill/  build-essential/  nginx/  ohai/  rsyslog/  runit/  yum/  yum-epel/
+```
+
+- metadata.rbに依存関係を追加
+これでrecipeでuser_accountが使えるようになる。
+```bash
+depends 'user'
+```
+
+- recipeを作成
+```
+user_account "hoge" do
+  action :create
+  passwd 
+end
+
+# passwdの作成
+$ openssl passwd -1 "theplaintextpassword"
+```
+
+* 参考URL
 [Berkshelf v3入門](http://qiita.com/DQNEO/items/9adcbd69ecaa62fbef41)
+
+
 
 ## user管理をchefでやってみる
 * 参考URL
