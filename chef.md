@@ -59,3 +59,10 @@ not_if "/usr/local/bin/git --version | grep -q '1.8.4'"
 
 * 参考URL
 [chef install and update programs from source](http://stackoverflow.com/questions/8530593/chef-install-and-update-programs-from-source)
+
+## Berkshelf
+[Berkshelf v3入門](http://qiita.com/DQNEO/items/9adcbd69ecaa62fbef41)
+
+## user管理をchefでやってみる
+* 参考URL
+[さくらVPSの初期設定をChefSoloを使ってやってみた](http://tsuchikazu.net/vps_chef_solo/)
